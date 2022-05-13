@@ -5,10 +5,11 @@ export function Index() {
    *
    * Note: The corresponding styles are in the ./index.css file.
    */
+  // hover background was hsla(162, 47%, 50%, 1);
   const listItemLink = "group list-item-link flex items-center rounded-xl mt-4 p-4 w-full transition hover:text-white hover:bg-green-500";
   const listItemLinkIcon = "mr-4 h-6 w-6";
   const listItemLinkTitle = "grow font-normal transition";
-  const listItemLinkSubTitle = "block grow text-xs font-light leading-4 text-gray-500";
+  const listItemLinkSubTitle = "block grow text-xs font-light leading-4 text-gray-500 hover:text-gray-100";
   const listItemLinkChevron = "h-4 w-4 transition-all group-hover:translate-x-1"
   const buttonPill = "button-pill py-6 px-8 transition duration-300 rounded-3xl shadow-lg flex items-center group hover:text-white"
   const buttonPillSVG = "shrink-0 w-12 group-hover:text-white"
@@ -23,14 +24,15 @@ export function Index() {
             </h1>
           </div>
 
-          <div id="hero" className="rounded-3xl bg-blue-900 grid mt-14 grid-cols-1 md:grid-cols-2" style={{
+          <div id="hero" className="rounded-3xl text-gray-700 grid mt-14 grid-cols-1 md:grid-cols-2" style={{
             // bg-blue-900 os closest in tailwind colors
             backgroundColor: 'hsla(214, 62%, 21%, 1)'
           }}>
             <div className="text-container py-12 px-8 text-white">
               <h2 className="text-2xl leading-6 relative">
                 <svg
-                  className="text-green-400 absolute top-0 -left-1 w-8"
+                  className="absolute top-0 -left-1 w-8"
+                  style={{ color: 'rgb(68, 187, 151)' }}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -45,7 +47,7 @@ export function Index() {
                 </svg>
                 <span className="ml-10">You&apos;re up and running</span>
               </h2>
-              <a href="#commands" className="bg-white rounded-xl text-slate-700 inline-block mt-6 px-8 py-4"> What&apos;s next? </a>
+              <a href="#commands" className="bg-white rounded-xl text-gray-700 inline-block mt-6 px-8 py-4"> What&apos;s next? </a>
             </div>
             <div className="logo-container px-8 justify-center	hidden md:flex">
               <svg
@@ -260,6 +262,8 @@ export function Index() {
             <div id="other-links">
               <a
                 id="nx-console"
+                // VSCode blue:  background-color: rgba(0, 122, 204, 1);
+                // don't know how to hover over it
                 className={`${buttonPill} hover:bg-blue-500`}
                 href="https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console&utm_source=nx-project"
                 target="_blank"
@@ -306,7 +310,7 @@ export function Index() {
                   You can activate distributed tasks executions and caching by
                   running:
                 </p>
-                <pre className="mt-4">nx connect-to-nx-cloud</pre>
+                <pre className="mt-4 rounded text-gray-200 bg-gray-700 px-2 py-3">nx connect-to-nx-cloud</pre>
                 <a
                   className="text-gray-500 mt-6 block text-sm text-right hover:underline"
                   href="https://nx.app/?utm_source=nx-project"
@@ -319,6 +323,7 @@ export function Index() {
               </div>
               <a
                 id="nx-repo"
+                // original bgh hover was: rgba(24, 23, 23, 1);
                 className={`${buttonPill} hover:bg-gray-900`}
                 href="https://github.com/nrwl/nx?utm_source=nx-project"
                 target="_blank"
@@ -363,7 +368,7 @@ export function Index() {
                 </svg>
                 Add UI library
               </summary>
-              <pre>
+              <pre className="rounded text-gray-200 bg-gray-700 px-2 py-3">
                 <span className="block text-gray-400"># Generate UI lib</span>
                 nx g @nrwl/angular:lib ui
                 <span className="block text-gray-400"># Add a component</span>
@@ -387,7 +392,7 @@ export function Index() {
                 </svg>
                 View interactive project graph
               </summary>
-              <pre>nx graph</pre>
+              <pre className="rounded text-gray-200 bg-gray-700 px-2 py-3">nx graph</pre>
             </details>
             <details className="flex items-center mt-4 px-4 w-full">
               <summary className="flex rounded-lg p-2 transition cursor-pointer hover:bg-gray-100">
@@ -406,7 +411,7 @@ export function Index() {
                 </svg>
                 Run affected commands
               </summary>
-              <pre>
+              <pre className="rounded text-gray-200 bg-gray-700 px-2 py-3">
                 <span className="block text-gray-400"># see what&apos;s been affected by changes</span>
                 nx affected:graph
                 <span className="block text-gray-400"># run tests for current changes</span>
