@@ -1,7 +1,7 @@
 import { getGreeting } from '../support/app.po';
 
 describe('site', () => {
-  beforeEach(() => cy.visit('/'));
+  beforeEach(() => cy.visit('/oldindex'));
 
   it('should display welcome message', () => {
     // Custom command example, see `../support/commands.ts` file
