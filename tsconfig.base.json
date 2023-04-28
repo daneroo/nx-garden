@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-garden/is-even": ["packages/is-even/src/index.ts"]
+      "@nx-garden/is-even": ["packages/is-even/src/index.ts"],
+      "@nx-garden/is-odd": ["packages/is-odd/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

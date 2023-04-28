@@ -13,6 +13,16 @@ I want to have:
 
 ## Setup
 
+### Adding a Library
+
+```bash
+pnpm exec nx generate @nx/js:library is-even --unitTestRunner=vitest --bundler=vite --publishable --importPath=@nx-garden/is-even
+
+pnpm exec nx generate @nx/js:library is-odd --unitTestRunner=vitest --bundler=vite --publishable --importPath=@nx-garden/is-odd
+```
+
+### Initial repo setup
+
 Started using [Nx Integrated tutorial](https://nx.dev/tutorials/integrated-repo-tutorial)
 
 Using [options from the docs](https://nx.dev/packages/nx/documents/create-nx-workspace)
