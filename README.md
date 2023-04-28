@@ -1,9 +1,23 @@
 # NxGarden
 
 - This project was generated using [Nx](https://nx.dev).
-- Added TailwindCSS to the project (v3).
-  - Rewrote index page with tailwindcss.
 
+I want to have:
+
+- a nextjs site
+- a nextra site for docs
+- I want tailwindcss
+- I want a deno cli app
+- I want to dockerize the two sites
+- I want e2e
+
+## Setup
+
+Started using [Nx Integrated tutorial](https://nx.dev/tutorials/integrated-repo-tutorial)
+
+```bash
+
+```
 ## TODO
 
 - Remove NxCloud token `nx.json/../accessToken`
