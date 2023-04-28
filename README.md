@@ -15,9 +15,25 @@ I want to have:
 
 Started using [Nx Integrated tutorial](https://nx.dev/tutorials/integrated-repo-tutorial)
 
+Using [options from the docs](https://nx.dev/packages/nx/documents/create-nx-workspace)
+
 ```bash
+npx create-nx-workspace@latest --allPrompts
+
+✔ Choose what to create                 · integrated
+✔ What to create in the new workspace   · ts
+✔ Repository name                       · nx-garden
+✔ Which package manager to use          · pnpm
+✔ Main branch name                    · main
+✔ Enable distributed caching to make your CI faster · Yes
+✔ CI workflow file to generate?       · github
+
+#  or checking all the options myself:
+# --bundler seems to have had no impact on the generated project
+npx create-nx-workspace@latest --bundler vite --ci github --defaultBase main --docker --packageManager pnpm --preset ts --skipGit nx-garden
 
 ```
+
 ## TODO
 
 - Remove NxCloud token `nx.json/../accessToken`
@@ -29,7 +45,7 @@ Started using [Nx Integrated tutorial](https://nx.dev/tutorials/integrated-repo-
 - Test: `nx test site` to execute the unit tests via [Jest](https://jestjs.io).
 - E2E: `nx e2e site-e2e` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
 
-## Utility sites of note
+## References
 
 - [Tasilwindcss Docs](https://tailwindcss.com/docs/)
 - [Tailwind CSS color matcher](https://moh-slimani.github.io/tailwind-css-color-matcher/)
