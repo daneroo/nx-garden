@@ -11,6 +11,19 @@ I want to have:
 - I want to dockerize the two sites
 - I want e2e
 
+## Usage
+
+- `pnpm test`: `nx run-many -t test --all`
+- `pnpm lint`: `nx run-many -t lint --all`
+- `pnpm format:check`: `nx run-many -t format:check --all`
+- `pnpm format:write`: `nx run-many -t format:write --all`
+
+And when we have site and docs:
+
+- Dev: `nx serve site`
+- Test: `nx test site` to execute the unit tests via [Jest](https://jestjs.io).
+- E2E: `nx e2e site-e2e` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
+
 ## Setup
 
 ### Adding a Library
@@ -48,12 +61,6 @@ npx create-nx-workspace@latest --bundler vite --ci github --defaultBase main --d
 
 - Remove NxCloud token `nx.json/../accessToken`
 - [Try Astro with Nx and TailwindCSS](https://leosvel.dev/blog/creating-my-personal-website-with-astro-tailwindcss-and-nx/)
-
-## Usage
-
-- Dev: `nx serve site`
-- Test: `nx test site` to execute the unit tests via [Jest](https://jestjs.io).
-- E2E: `nx e2e site-e2e` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
 
 ## References
 
