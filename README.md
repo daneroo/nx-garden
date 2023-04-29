@@ -2,13 +2,20 @@
 
 - This project was generated using [Nx](https://nx.dev).
 
+2023-04-29: **Failed again**, this time `withNextra()` was the problem.
+I did completely reset this workspace, and started again from scratch.
+See my complete notes below, In case I start again.
+
+I also disabled CI (`.github/workflows//ci.yml-DISABLED`), not sure it was actually working..
+But I did leave nx-cloud connected.
+
 I want to have:
 
 - [x] a nextjs site
   - [ ] generate a page
   - [ ] generate a component
   - [ ] to test things like libraries
-- [ ] a nextra site for docs
+- [ ] a nextra site for docs <-- FAILED
 - [ ] I want tailwindcss
 - [ ] I want a deno cli app
 - [ ] I want to dockerize the two sites
@@ -42,7 +49,30 @@ pnpm exec nx generate @nx/next:application site-docs
 pnpm exec nx generate @nx/next:library shared-next
 ```
 
-### Adding a libraries, with dependents
+#### Adding nextra to a nextjs site
+
+From the [nextra docs](https://nextra.site/docs/docs-theme/start):
+
+```bash
+# Done only once for the workspace
+pnpm i nextra nextra-theme-docs
+```
+
+And then modify the `next.config.js` file:
+
+```js
+const withNextra = require('nextra')({
+  theme: 'nextra-theme-docs',
+  themeConfig: './theme.config.jsx',
+})
+ 
+module.exports = withNextra()
+ 
+// If you have other Next.js configurations, you can pass them as the parameter:
+// module.exports = withNextra({ /* other next.js config */ })
+```
+
+### Adding libraries, with inter-dependencies
 
 ```bash
 pnpm exec nx generate @nx/js:library is-even --importPath=@nx-garden/is-even
