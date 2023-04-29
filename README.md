@@ -4,12 +4,13 @@
 
 I want to have:
 
-- a nextjs site
+- a nextjs site to test things like libraries
 - a nextra site for docs
 - I want tailwindcss
 - I want a deno cli app
 - I want to dockerize the two sites
 - I want e2e
+- I want to deploy to vercel (2 sites)
 
 ## Usage
 
@@ -20,13 +21,24 @@ I want to have:
 
 And when we have site and docs:
 
-- Dev: `nx serve site`
-- Test: `nx test site` to execute the unit tests via [Jest](https://jestjs.io).
-- E2E: `nx e2e site-e2e` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
+- Dev: `nx serve site-garden`
+- Test: `nx test site-garden` to execute the unit tests via [Jest](https://jestjs.io).
+- E2E: `nx e2e site-garden-e2e` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
 
 ## Setup
 
-### Adding a Library
+### Adding a Next.js App
+
+```bash
+pnpm install --save-dev @nx/next # once only
+
+pnpm exec nx generate @nx/next:application site-garden
+pnpm exec nx generate @nx/next:application site-docs
+
+pnpm exec nx generate @nx/next:
+```
+
+### Adding a libraries, with dependents
 
 ```bash
 pnpm exec nx generate @nx/js:library is-even --importPath=@nx-garden/is-even
@@ -59,11 +71,13 @@ npx create-nx-workspace@latest --bundler vite --ci github --defaultBase main --d
 
 ## TODO
 
-- Remove NxCloud token `nx.json/../accessToken`
-- [Try Astro with Nx and TailwindCSS](https://leosvel.dev/blog/creating-my-personal-website-with-astro-tailwindcss-and-nx/)
+- [ ] Add a next.js app <https://nx.dev/packages/next>
+- [ ] Remove NxCloud token `nx.json/../accessToken`
+- [ ] [Try Astro with Nx and TailwindCSS](https://leosvel.dev/blog/creating-my-personal-website-with-astro-tailwindcss-and-nx/)
 
 ## References
 
+- [Next+Tailwind 2021](https://blog.nrwl.io/setup-next-js-to-use-tailwind-with-nx-849b7e21d8d0)
 - [Tasilwindcss Docs](https://tailwindcss.com/docs/)
 - [Tailwind CSS color matcher](https://moh-slimani.github.io/tailwind-css-color-matcher/)
 - Extract SVG -> React component: <https://transform.tools/>
