@@ -78,6 +78,6 @@ npx create-nx-workspace@latest --bundler vite --ci github --defaultBase main --d
 ## References
 
 - [Next+Tailwind 2021](https://blog.nrwl.io/setup-next-js-to-use-tailwind-with-nx-849b7e21d8d0)
-- [Tasilwindcss Docs](https://tailwindcss.com/docs/)
+- [Tailwind CSS Docs](https://tailwindcss.com/docs/)
 - [Tailwind CSS color matcher](https://moh-slimani.github.io/tailwind-css-color-matcher/)
 - Extract SVG -> React component: <https://transform.tools/>
