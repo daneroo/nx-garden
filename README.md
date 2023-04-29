@@ -35,7 +35,7 @@ pnpm install --save-dev @nx/next # once only
 pnpm exec nx generate @nx/next:application site-garden
 pnpm exec nx generate @nx/next:application site-docs
 
-pnpm exec nx generate @nx/next:
+pnpm exec nx generate @nx/next:library shared-next
 ```
 
 ### Adding a libraries, with dependents
