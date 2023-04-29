@@ -4,13 +4,17 @@
 
 I want to have:
 
-- a nextjs site to test things like libraries
-- a nextra site for docs
-- I want tailwindcss
-- I want a deno cli app
-- I want to dockerize the two sites
-- I want e2e
-- I want to deploy to vercel (2 sites)
+- [x] a nextjs site
+  - [ ] generate a page
+  - [ ] generate a component
+  - [ ] to test things like libraries
+- [ ] a nextra site for docs
+- [ ] I want tailwindcss
+- [ ] I want a deno cli app
+- [ ] I want to dockerize the two sites
+- [x] I want e2e
+  - [ ] with actual tests
+- [ ] I want to deploy to vercel (2 sites)
 
 ## Usage
 
@@ -71,9 +75,9 @@ npx create-nx-workspace@latest --bundler vite --ci github --defaultBase main --d
 
 ## TODO
 
-- [ ] Add a next.js app <https://nx.dev/packages/next>
-- [ ] Remove NxCloud token `nx.json/../accessToken`
+- [x] Add a next.js app <https://nx.dev/packages/next>
 - [ ] [Try Astro with Nx and TailwindCSS](https://leosvel.dev/blog/creating-my-personal-website-with-astro-tailwindcss-and-nx/)
+- [ ] Remove NxCloud token `nx.json/../accessToken` - NOT for now
 
 ## References
 
