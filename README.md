@@ -2,6 +2,7 @@
 
 - This project was generated using [Nx](https://nx.dev).
 
+2023-04-30: **archiving this project**. Gonna see if I have better luck with [turbo](https://turbo.build/repo/docs)
 2023-04-29: **Failed again**, this time `withNextra()` was the problem.
 I did completely reset this workspace, and started again from scratch.
 See my complete notes below, In case I start again.
